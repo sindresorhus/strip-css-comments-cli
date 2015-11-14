@@ -13,10 +13,10 @@
     "strip-css-comments": "cli.js"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js"
@@ -37,12 +37,16 @@
     "string"
   ],
   "dependencies": {
-    "get-stdin": "^4.0.1",
-    "meow": "^3.3.0",
+    "get-stdin": "^5.0.1",
+    "meow": "^3.5.0",
     "strip-css-comments": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4",
+    "ava": "*",
+    "pify": "^2.3.0",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
