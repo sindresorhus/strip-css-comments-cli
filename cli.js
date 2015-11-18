@@ -6,17 +6,17 @@ const meow = require('meow');
 const fn = require('strip-css-comments');
 
 const cli = meow(`
-	'Usage
-	'  $ strip-css-comments <input-file> > <output-file>
-	'  $ strip-css-comments < <input-string>
+	Usage
+	  $ strip-css-comments <input-file> > <output-file>
+	  $ strip-css-comments < <input-string>
 
-	'Options
-	'  --preserve=<regex>  Preserve comments matching a regex [Default: ^!]
-	'  --no-preserve       Strip all comments including \`/*!\`
+	Options
+	  --preserve=<regex>  Preserve comments matching a regex [Default: ^!]
+	  --no-preserve       Strip all comments including \`/*!\`
 
-	'Examples
-	'  $ strip-css-comments src/app.css > dist/app.css
-	'  $ strip-css-comments < src/app.css --preserve='^#'
+	Examples
+	  $ strip-css-comments src/app.css > dist/app.css
+	  $ strip-css-comments < src/app.css --preserve='^#'
 `, {
 	string: ['_']
 });
