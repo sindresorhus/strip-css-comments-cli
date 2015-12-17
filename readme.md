@@ -13,7 +13,7 @@ $ npm install --global strip-css-comments-cli
 ## Usage
 
 ```
-$ strip-css-comments-cli --help
+$ strip-css-comments --help
 
   Usage
     $ strip-css-comments <input-file> > <output-file>
