@@ -1,4 +1,4 @@
-# strip-css-comments-cli [![Build Status](https://travis-ci.org/sindresorhus/strip-css-comments-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/strip-css-comments-cli)
+# strip-css-comments-cli
 
 > Strip comments from CSS
 
