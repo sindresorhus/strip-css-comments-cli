@@ -1,13 +1,12 @@
-import childProcess from 'child_process';
 import test from 'ava';
-import pify from 'pify';
+import execa from 'execa';
 
 test('main', async t => {
-	const stdout = await pify(childProcess.execFile)('./cli.js', ['fixture.css']);
-	t.is(stdout.trim(), 'body{}');
+	const {stdout} = await execa('./cli.js', ['fixture.css']);
+	t.is(stdout, 'body{}\n');
 });
 
 test('stdin', async t => {
-	const stdout = await pify(childProcess.exec)('echo \'body{/*comment*/}\' | ./cli.js');
-	t.is(stdout.trim(), 'body{}');
+	const {stdout} = await execa('./cli.js', {input: 'body{/*comment*/}'});
+	t.is(stdout, 'body{}');
 });
